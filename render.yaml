@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: spacex-mission-tracker
-    buildCommand: npm run build
-    staticPublishPath: dist/101431281-lab-test2-comp3133
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html

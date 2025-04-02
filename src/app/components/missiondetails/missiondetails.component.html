@@ -1,1 +1,13 @@
-<p>missiondetails works!</p>
+<div *ngIf="mission" style="background-color: lightblue; padding: 20px;">
+    <h2>{{ mission.mission_name }} (#{{ mission.flight_number }})</h2>
+    <img [src]="mission.links.mission_patch_small" alt="Patch" width="120" />
+    <p><strong>Year:</strong> {{ mission.launch_year }}</p>
+    <p><strong>Rocket:</strong> {{ mission.rocket.rocket_name }} ({{ mission.rocket.rocket_type }})</p>
+    <p><strong>Details:</strong> {{ mission.details || 'No details available.' }}</p>
+    <p>
+      <a [href]="mission.links.article_link" target="_blank">Article</a> |
+      <a [href]="mission.links.wikipedia" target="_blank">Wikipedia</a> |
+      <a [href]="mission.links.video_link" target="_blank">Video</a>
+    </p>
+  </div>
+  

@@ -1,0 +1,54 @@
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .year-field {
+    width: 300px;
+    font-size: 18px;
+  }
+  
+  .filter-btn,
+  .reset-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 0 !important; 
+    font-weight: bold;
+    text-transform: none;
+  }
+  
+  .filter-group {
+    margin: 20px 0;
+  }
+  
+  .filter-group h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  mat-radio-button {
+    font-size: 20px !important;
+    margin-right: 30px;
+  }
+  
+  .mat-radio-label-content {
+    font-size: 20px !important;
+  }
+  
+  .radio-text {
+    font-size: 18px;
+    color: #000;
+  }
+
+  mat-card {
+    background-color: #d0f0c0 !important; 
+    border: 1px solid #a5d6a7;
+    margin: 16px 0;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  
+  

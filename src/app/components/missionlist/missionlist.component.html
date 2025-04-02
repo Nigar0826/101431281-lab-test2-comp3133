@@ -1,1 +1,24 @@
-<p>missionlist works!</p>
+<h2>Mission List</h2>
+
+<!-- 🔗 Mission Filter Component -->
+<app-missionfilter 
+  (yearFiltered)="filterByYear($event)" 
+  (launchSuccessFiltered)="filterByLaunchSuccess($event)"
+  (landingSuccessFiltered)="filterByLandingSuccess($event)"
+  (resetFilter)="loadAllMissions()">
+</app-missionfilter>
+
+<!-- Launch Cards -->
+<div *ngFor="let launch of filteredLaunches" style="background-color: rgb(142, 196, 244); padding: 15px; margin: 10px 0; border: 1px solid black;">
+    <img [src]="launch.links.mission_patch_small" alt="Patch" width="100">
+    <h3>{{ launch.mission_name }} (#{{ launch.flight_number }})</h3>
+    <p><strong>Year:</strong> {{ launch.launch_year }}</p>
+    <p><strong>Details:</strong> {{ launch.details || 'No details available.' }}</p>
+    <p><strong>Rocket:</strong> {{ launch.rocket.rocket_name }} ({{ launch.rocket.rocket_type }})</p>
+    <p>
+        <a [href]="launch.links.article_link" target="_blank">Article</a> |
+        <a [href]="launch.links.wikipedia" target="_blank">Wikipedia</a> |
+        <a [href]="launch.links.video_link" target="_blank">Video</a>
+        <!--<a [routerLink]="['/details', launch.flight_number]">Details</a>-->
+    </p>
+</div>
